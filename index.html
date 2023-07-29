@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Study Planner</title>
     <link rel="icon" type="image/x-icon" href="Resources\Study Planner Logo.png">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
+    </script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -23,6 +27,12 @@
     <div class="ui purple message">
         <i class="calendar outline icon"></i>Today is <span id="date">25, July, 2023 : Tuesday</span>
     </div>
+
+    <div class="ui indicating progress" data-value="0" data-total="4" id="example5">
+        <div class="bar"></div>
+        <div class="label">0 Completed Topics</div>
+    </div>
+
     <div class="ui link cards centered">
         <div class="card">
             <div class="image">
@@ -37,7 +47,7 @@
                    Chapter: <span class="purple chapter" id="phychap">Motion in a Straight line</span>
                 </div>
                 <div class="extra content">
-                    <button class="ui primary button" fdprocessedid="h5kntd">
+                    <button class="ui primary button" fdprocessedid="h5kntd" onclick="progresscheck('p')">
                         Done
                     </button>
                     <button class="ui yellow button" fdprocessedid="x6vvt">
@@ -59,7 +69,7 @@
                     Chapter: <span class="purple chapter" id="chemchap">States of Matter</span>
                 </div>
                 <div class="extra content">
-                    <button class="ui primary button" fdprocessedid="h5kntd">
+                    <button class="ui primary button" fdprocessedid="h5kntd" onclick="progresscheck('c')">
                         Done
                     </button>
                     <button class="ui yellow button" fdprocessedid="x6vvt">
@@ -81,7 +91,7 @@
                     Chapter: <span class="purple chapter" id="botanychap">Cell: The Unit of Life</span>
                 </div>
                 <div class="extra content">
-                    <button class="ui primary button" fdprocessedid="h5kntd">
+                    <button class="ui primary button" fdprocessedid="h5kntd" onclick="progresscheck('b')">
                         Done
                     </button>
                     <button class="ui yellow button" fdprocessedid="x6vvt">
@@ -103,7 +113,7 @@
                     Chapter: <span class="purple chapter" id="zoologychap">Structural Organisation in Animals part 1</span>
                 </div>
                 <div class="extra content">
-                    <button class="ui primary button" fdprocessedid="h5kntd">
+                    <button class="ui primary button" fdprocessedid="h5kntd" onclick="progresscheck('z')">
                         Done
                     </button>
                     <button class="ui yellow button" fdprocessedid="x6vvt">
@@ -130,5 +140,5 @@
     </h4>
     <br><br><br><br><br>
   </body>
-  <script src="date.js"></script><script src="joke.js"></script><script src="question.js"></script>
+  <script src="date.js"></script><script src="joke.js"></script><script src="question.js"></script><script src="button.js"></script>
 </html>
