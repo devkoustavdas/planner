@@ -2,7 +2,7 @@ zoology = [
   {
     chapter: "Structural Organisation in Animals-1",
     topic:
-      "Tissue introduction, Simple Epithelium, Brush bordered Epithelium and Ciliated Epithelium, Glandular Epithelium, Types of Glands",
+      "Tissue Introduction, Simple Epithelium, Brush bordered Epithelium and Ciliated Epithelium, Glandular Epithelium, Types of Glands",
   },
   {
     chapter: "Structural Organisation in Animals-1",
@@ -24,6 +24,11 @@ zoology = [
   {
     chapter: "Structural Organisation in Animals-1",
     topic: "Previous Year Ouestions Problem Practise",
+  },
+  {
+    chapter: "Breathing and Exchange of Gases",
+    topic:
+      "Introduction and Respiratory organs in Animals, Human respiratory system: Nostrils, Nasal chamber, Pharynx, Larynx, Trachea",
   },
 ];
 
@@ -52,6 +57,10 @@ physics = [
     topic: "Forces & Laws of motion, Newton's first law of motion",
   },
   {
+    chapter: "Newton law of Motion",
+    topic: "Newton's Second law of motion, Newton's Third law & importance",
+  },
+  {
     chapter: "Motion in Plane",
     topic: "Previous Year Ouestions Problem Practise",
   },
@@ -60,8 +69,7 @@ physics = [
 botany = [
   {
     chapter: "Cell: The Unit of Life",
-    topic:
-      "What is a Cell? Overview of the Cell Theory, Prokaryotic cells-1",
+    topic: "What is a Cell? Overview of the Cell Theory, Prokaryotic cells-1",
   },
   {
     chapter: "Cell: The Unit of Life",
@@ -76,13 +84,17 @@ botany = [
     topic: "Eukaryotic cells-2",
   },
   {
+    chapter: "Cell: The Unit of Life",
+    topic: "Previous Year Ouestions Problem Practise",
+  },
+  {
     chapter: "Cell Cycle and Cell Division",
     topic:
       "Amitosis, Cell Cycle and Cell Division Phases of the cell cycle, M Phase-1",
   },
   {
-    chapter: "Cell: The Unit of Life",
-    topic: "Previous Year Ouestions Problem Practise",
+    chapter: "Cell Cycle and Cell Division",
+    topic: "M Phase-2, Meiosis",
   },
 ];
 
