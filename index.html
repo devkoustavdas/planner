@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2 class="ui orange header">
+        <img src="Resources\Study Planner Logo.png">
+        <div class="content">
+            Study Planner
+            <div class="sub header">Let's Crack NEET!</div>
+        </div>
+    </h2>
+    <h4 class="ui blue horizontal divider header">
+        <i class="stethoscope icon"></i>
+        What's For Today? 
+    </h4>
+    <div class="ui purple message">
+        <i class="calendar outline icon"></i>Today is <span id="date">25, July, 2023 : Tuesday</span>
+    </div>
+    <div class="ui link cards centered">
+        <div class="card">
+            <div class="image">
+                <img src="Resources\Physics Logo.png">
+            </div>
+            <div class="content">
+                <div class="header" id="phytopic">Kinematics/Equation of motion</div>
+                <div class="meta">
+                    <span class="date">Physics</span>
+                </div>
+                <div class="description">
+                   Chapter: <span class="purple chapter" id="phychap">Motion in a Straight line</span>
+                </div>
+                <div class="extra content">
+                    <button class="ui primary button" fdprocessedid="h5kntd">
+                        Done
+                    </button>
+                    <button class="ui yellow button" fdprocessedid="x6vvt">
+                        Weekend
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="Resources\CHEMISTRY Logo.png">
+            </div>
+            <div class="content">
+                <div class="header" id="chemtopic">Diffusion & Effusion, Kinetic theory of gases-1</div>
+                <div class="meta">
+                    <span class="date">Chemistry</span>
+                </div>
+                <div class="description">
+                    Chapter: <span class="purple chapter" id="chemchap">States of Matter</span>
+                </div>
+                <div class="extra content">
+                    <button class="ui primary button" fdprocessedid="h5kntd">
+                        Done
+                    </button>
+                    <button class="ui yellow button" fdprocessedid="x6vvt">
+                        Weekend
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="Resources\BOTANY Logo.png">
+            </div>
+            <div class="content">
+                <div class="header" id="botanytopic">What is a Cell? Overview of the Cell Theory, Prokaryotic cells-1</div>
+                <div class="meta">
+                    <span class="date">Botany</span>
+                </div>
+                <div class="description">
+                    Chapter: <span class="purple chapter" id="botanychap">Cell: The Unit of Life</span>
+                </div>
+                <div class="extra content">
+                    <button class="ui primary button" fdprocessedid="h5kntd">
+                        Done
+                    </button>
+                    <button class="ui yellow button" fdprocessedid="x6vvt">
+                        Weekend
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="Resources\ZOOLOGY Logo.png">
+            </div>
+            <div class="content">
+                <div class="header" id="zoologytopic">Types of Compound Epithelium, Cell Junctions, Types of Connective Tissues</div>
+                <div class="meta">
+                    <span class="date">Zoology</span>
+                </div>
+                <div class="description">
+                    Chapter: <span class="purple chapter" id="zoologychap">Structural Organisation in Animals part 1</span>
+                </div>
+                <div class="extra content">
+                    <button class="ui primary button" fdprocessedid="h5kntd">
+                        Done
+                    </button>
+                    <button class="ui yellow button" fdprocessedid="x6vvt">
+                        Weekend
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ui blue message">
+        <div id="jokepart1">What did the fish say when it swam into the wall?</div>
+        <div id="jokepart2"></div>
+        <div id="category">Pun</div>
+    </div>
+
+    <div class="ui pink message" id="down">
+        <i class="calendar outline icon"></i><span id="dayleftformonthend">5</span> Days for <span id="month">July</span> to end <hr>
+        <i class="hourglass half icon"></i><span id="dayleftforexam">5</span> Days left for the D-Day
+    </div>
+    <h4 class="ui blue horizontal divider header">
+        <i class="stethoscope icon"></i>
+        Let's Study
+    </h4>
+    <br><br><br><br><br>
+  </body>
+  <script src="date.js"></script><script src="joke.js"></script><script src="question.js"></script>
+</html>
