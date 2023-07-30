@@ -141,16 +141,19 @@ zoochap = document.getElementById("zoologychap");
 
 var datenew = new Date();
 var dtnew = datenew.getDate();
+var hours = datenew.getHours();
 
 function giveQuestion() {
   i = dtnew > 28 ? dtnew - 29 : dtnew - 1 + 3;
-  phystopic.innerHTML = physics[i]["topic"];
-  physchap.innerHTML = physics[i]["chapter"];
-  chemitopic.innerHTML = chemistry[i]["topic"];
-  chemichap.innerHTML = chemistry[i]["chapter"];
-  bottopic.innerHTML = botany[i]["topic"];
-  botchap.innerHTML = botany[i]["chapter"];
-  zootopic.innerHTML = zoology[i]["topic"];
-  zoochap.innerHTML = zoology[i]["chapter"];
+  if (hours > 5) {
+    phystopic.innerHTML = physics[i]["topic"];
+    physchap.innerHTML = physics[i]["chapter"];
+    chemitopic.innerHTML = chemistry[i]["topic"];
+    chemichap.innerHTML = chemistry[i]["chapter"];
+    bottopic.innerHTML = botany[i]["topic"];
+    botchap.innerHTML = botany[i]["chapter"];
+    zootopic.innerHTML = zoology[i]["topic"];
+    zoochap.innerHTML = zoology[i]["chapter"];
+  }
 }
 giveQuestion();
