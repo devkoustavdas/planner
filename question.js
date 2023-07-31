@@ -138,6 +138,7 @@ bottopic = document.getElementById("botanytopic");
 botchap = document.getElementById("botanychap");
 zootopic = document.getElementById("zoologytopic");
 zoochap = document.getElementById("zoologychap");
+dayNo = document.getElementById("dayNo");
 
 var datenew = new Date();
 var dtnew = datenew.getDate();
@@ -146,6 +147,7 @@ var hours = datenew.getHours();
 function giveQuestion() {
   i = dtnew > 28 ? dtnew - 29 : dtnew - 1 + 3;
   if (hours > 5) {
+    dayNo.innerHTML = i+1;
     phystopic.innerHTML = physics[i]["topic"];
     physchap.innerHTML = physics[i]["chapter"];
     chemitopic.innerHTML = chemistry[i]["topic"];
