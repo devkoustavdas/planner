@@ -1,4 +1,7 @@
 const d = new Date();
+
+var hr = d.getHours();
+
 var year = d.getFullYear();
 
 var m = d.getMonth();
@@ -32,3 +35,11 @@ document.getElementById("date").innerHTML = `${date}, ${month}, ${year} : ${day}
 const examDate = new Date("2023-05-5");
 daysLeft = Math.ceil((examDate.getTime() - d.getTime()) / (1000 * 60 * 60 * 24));
 document.getElementById("dayleftforexam").innerHTML = daysLeft > 0 ? daysLeft : 366 + daysLeft;
+
+var dateList = {
+  yr : year,
+  mth : month,
+  dat : dt,
+  dayToday : day,
+  hours : hr,
+};
