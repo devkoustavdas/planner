@@ -140,22 +140,20 @@ zootopic = document.getElementById("zoologytopic");
 zoochap = document.getElementById("zoologychap");
 dayNo = document.getElementById("dayNo");
 
-var datenew = new Date();
-var dtnew = datenew.getDate();
-var hours = datenew.getHours();
-
+dayIndex = 0;
 function giveQuestion() {
-  i = dtnew > 28 ? dtnew - 29 : dtnew - 1 + 3;
-  if (hours > 5) {
-    dayNo.innerHTML = i+1;
-    phystopic.innerHTML = physics[i]["topic"];
-    physchap.innerHTML = physics[i]["chapter"];
-    chemitopic.innerHTML = chemistry[i]["topic"];
-    chemichap.innerHTML = chemistry[i]["chapter"];
-    bottopic.innerHTML = botany[i]["topic"];
-    botchap.innerHTML = botany[i]["chapter"];
-    zootopic.innerHTML = zoology[i]["topic"];
-    zoochap.innerHTML = zoology[i]["chapter"];
+  if (hr > 5) dayIndex = dt > 28 ? dt - 29 : dt - 1 + 3;
+  else dayIndex = dt > 28 ? dt - 29 - 1 : dt - 1 + 3 - 1;
+  if (day != "Saturday" || day != "Sunday") {
+    dayNo.innerHTML = dayIndex + 1;
+    phystopic.innerHTML = physics[dayIndex]["topic"];
+    physchap.innerHTML = physics[dayIndex]["chapter"];
+    chemitopic.innerHTML = chemistry[dayIndex]["topic"];
+    chemichap.innerHTML = chemistry[dayIndex]["chapter"];
+    bottopic.innerHTML = botany[dayIndex]["topic"];
+    botchap.innerHTML = botany[dayIndex]["chapter"];
+    zootopic.innerHTML = zoology[dayIndex]["topic"];
+    zoochap.innerHTML = zoology[dayIndex]["chapter"];
   }
 }
 giveQuestion();
