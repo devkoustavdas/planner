@@ -45,6 +45,35 @@
         </div>
     </div>
 
+    <div>
+        <div class="borderbox">
+            <div class="labelname Purple bold">Physics</div>
+            <input type="text" class="Purple inputbox" id="phychap_Input" placeholder="Chapter Name"><input type="text" class="Purple inputbox" id="phytopic_Input" placeholder="Topic Name">
+            <button class="Purple" onclick="savePhy()"><i class="save icon"></i> Save</button>
+        </div>
+        <div class="borderbox">
+            <div class="labelname Red bold">Chemistry</div>
+            <input type="text" class="Red inputbox" placeholder="Chapter Name" id="chemchap_Input"><input type="text" class="Red inputbox" placeholder="Topic Name" id="chemtopic_Input">
+            <button class="Red" onclick="saveChem()"><i class="save icon"></i> Save</button>
+        </div>
+        <div class="borderbox">
+            <div class="labelname Teal bold">Zoology</div>
+            <input type="text" class="Teal inputbox" placeholder="Chapter Name" id="zoologychap_Input"><input type="text" class="Teal inputbox" placeholder="Topic Name" id="zoologytopic_Input">
+            <button class="Teal" onclick="saveZoo()"><i class="save icon"></i> Save</button>
+        </div>
+        <div class="borderbox">
+            <div class="labelname Orange bold">Botany</div>
+            <input type="text" class="Orange inputbox" placeholder="Chapter Name" id="botanychap_Input"><input type="text" class="Orange inputbox" placeholder="Topic Name" id="botanytopic_Input">
+            <button class="Orange" onclick="saveBot()"><i class="save icon"></i> Save</button>
+        </div>
+    </div>
+
+    <div class="notification" id="notcompletedsub">
+        <div class="Orange">
+            You didn't saved today's topics of <span id="not-saved-subjects">Physics, Chemistry, Biology, Zoology</span><button onclick="closeNotification()" type="button" class="Red" style="border: none; float: right; background-color: transparent;"><i class="close icon"></i></button>
+        </div>
+    </div>
+
     <div class="ui link cards centered">
         <div class="card">
             <div class="image">
@@ -152,5 +181,5 @@
     </h4>
     <br><br><br><br><br>
   </body>
-  <script src="date.js"></script><script src="joke.js"></script><script src="question.js"></script><script src="button.js"></script>
+  <script src="date.js"></script><script src="joke.js"></script><script src="add.js"></script><script src="button.js"></script><script src="question.js"></script>
 </html>
