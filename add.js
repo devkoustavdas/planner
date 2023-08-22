@@ -14,36 +14,36 @@ var bottopic_Input = document.getElementById("botanytopic_Input");
 var botchap_Input = document.getElementById("botanychap_Input");
 var zootopic_Input = document.getElementById("zoologytopic_Input");
 var zoochap_Input = document.getElementById("zoologychap_Input");
-var savedsubject = [1, 2, 3, 4];
-var subjectList = ["Physics", "Chemistry", "Zoology", "Botany"];
+
 function autosave() {
-    phystopic.innerHTML = localStorage.getItem("phytopic");
-    physchap.innerHTML = localStorage.getItem("phychap");
-    chemitopic.innerHTML = localStorage.getItem("chemtopic");
-    chemichap.innerHTML = localStorage.getItem("chemchap");
-    zootopic.innerHTML = localStorage.getItem("zootopic");
-    zoochap.innerHTML = localStorage.getItem("zoochap");
-    bottopic.innerHTML = localStorage.getItem("bottopic");
-    botchap.innerHTML = localStorage.getItem("botchap");
+  phystopic.innerHTML = localStorage.getItem("phytopic");
+  physchap.innerHTML = localStorage.getItem("phychap");
+  chemitopic.innerHTML = localStorage.getItem("chemtopic");
+  chemichap.innerHTML = localStorage.getItem("chemchap");
+  zootopic.innerHTML = localStorage.getItem("zootopic");
+  zoochap.innerHTML = localStorage.getItem("zoochap");
+  bottopic.innerHTML = localStorage.getItem("bottopic");
+  botchap.innerHTML = localStorage.getItem("botchap");
 }
 autosave();
+
 function savePhy() {
-    delete savedsubject[0];
-    notsavedsubjectsdisplay();
-    var topicname = phystopic_Input.value;
-    if (topicname != "") {
-        phystopic.innerHTML = topicname;
-        localStorage.setItem("phytopic", topicname);
-    }
-    var chaptername = physchap_Input.value;
-    if (chaptername != "") {
-      physchap.innerHTML = chaptername;
-      localStorage.setItem("phychap", chaptername);
-    }
+  var topicname = phystopic_Input.value;
+  if (topicname != "") {
+    phystopic.innerHTML = topicname;
+    localStorage.setItem("phytopic", topicname);
+  }
+  var chaptername = physchap_Input.value;
+  if (chaptername != "") {
+    physchap.innerHTML = chaptername;
+    localStorage.setItem("phychap", chaptername);
+  }
+  if (topicname != "" || chaptername != "") {
+    notsavedsubjectsdisplay(1);
+  }
 }
+
 function saveChem() {
-  delete savedsubject[1];
-  notsavedsubjectsdisplay();
   var topicname = chemitopic_Input.value;
   if (topicname != "") {
     chemitopic.innerHTML = topicname;
@@ -54,10 +54,12 @@ function saveChem() {
     chemichap.innerHTML = chaptername;
     localStorage.setItem("chemchap", chaptername);
   }
+  if (topicname != "" || chaptername != "") {
+    notsavedsubjectsdisplay(2);
+  }
 }
+
 function saveZoo() {
-  delete savedsubject[2];
-  notsavedsubjectsdisplay();
   var topicname = zootopic_Input.value;
   if (topicname != "") {
     zootopic.innerHTML = topicname;
@@ -68,10 +70,12 @@ function saveZoo() {
     zoochap.innerHTML = chaptername;
     localStorage.setItem("zoochap", chaptername);
   }
+  if (topicname != "" || chaptername != "") {
+    notsavedsubjectsdisplay(3);
+  }
 }
+
 function saveBot() {
-  delete savedsubject[3];
-  notsavedsubjectsdisplay();
   var topicname = bottopic_Input.value;
   if (topicname != "") {
     bottopic.innerHTML = topicname;
@@ -82,22 +86,34 @@ function saveBot() {
     botchap.innerHTML = chaptername;
     localStorage.setItem("botchap", chaptername);
   }
-}
-function closeNotification() {
-  var notificationBox = document.getElementById("notcompletedsub");
-  notificationBox.style.transform = "scale(0)";
-}
-function notsavedsubjectsdisplay() {
-  var subjects = "";
-  for (let i = 0; i<savedsubject.length; i++) {
-    if (savedsubject[i]) {
-subjects = subjects + subjectList[savedsubject[i]-1] + ", ";
-    }
-  }
-  if(subjects == "") {
-    closeNotification();
-  }
-  else {
-document.getElementById("not-saved-subjects").innerHTML = subjects;
+  if (topicname != "" || chaptername != "") {
+    notsavedsubjectsdisplay(4);
   }
 }
+
+var subjects = ["Physics", "Chemistry", "Zoology", "Botany"];
+var notificationStatus = "open";
+
+function notsavedsubjectsdisplay(sub) {
+  subjects[sub - 1] = null;
+  localStorage.setItem("mysubjectList", JSON.stringify(subjects));
+  if (subjects.every((subject) => subject === null)) {
+    changeNotification("0");
+    notificationStatus = "closed";
+  } else {
+    document.getElementById("not-saved-subjects").innerHTML = subjects
+      .filter(Boolean)
+      .join(". ");
+  }
+}
+
+// window.onload = function () {
+//   if (JSON.parse(localStorage.getItem("mysubjectList")) !== null) {
+//     subjects = JSON.parse(localStorage.getItem("mysubjectList"));
+//     document.getElementById("not-saved-subjects").innerHTML = subjects
+//       .filter(Boolean)
+//       .join(". ");
+//   }
+// };
+
+
